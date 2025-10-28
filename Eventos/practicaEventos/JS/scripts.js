@@ -21,7 +21,7 @@ opcionesMenu.forEach(opcion => {
 
         }
         if(opcion.id == 'numero'){
-            let num = Math.floor(Math.random()*100);
+            let num = Math.floor(Math.random()*10);
             numeroAleatorio.innerHTML = ' '+num;
         }
     });
@@ -29,3 +29,21 @@ opcionesMenu.forEach(opcion => {
 
 /* EJERCICIO 2 */
 
+let botonSubmit = document.getElementById('botonSubmit');
+
+botonSubmit.addEventListener('click', () => {
+    let contrasenya = document.getElementById('contrasenya');
+    let correo = document.getElementById('correo');
+    console.log(correo.value);
+    if(contrasenya.value.length < 8 || contrasenya.value.length > 10){
+        contrasenya.style.backgroundColor = "grey";
+    }else{
+        contrasenya.style.backgroundColor = "white";
+    }
+    console.log('si pasa por aqui');
+    if(!correo.value.includes("@")){
+        correo.style.backgroundColor = "grey";
+    }else{
+        correo.style.backgroundColor = "white";
+    }
+});
