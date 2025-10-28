@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios Eventos</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        #contenedorCuadrados div{
+            border: 1px solid;
+            width: 50px;
+            height: 50px;
+        }
+
+        #verde{
+            background-color: green;
+        }
+
+        #rojo{
+            background-color: red;
+        }
+
+        #azul{
+            background-color: blue;
+        }
+
+
+    </style>
 </head>
 <body>
     <h1>Ejercicios Eventos</h1>
@@ -43,11 +64,39 @@
 
     <h3>Ej 4:</h3>
 
-    <label for=""><input type="radio" name="lomismo" value="Juan"></label>
-    <label for=""><input type="radio" name="lomismo" value="Ana"></label>
-    <label for=""><input type="radio" name="lomismo" value="Luis"></label>
+    <label>Juan<input type="radio" name="lomismo" value="Juan"></label>
+    <label>Ana<input type="radio" name="lomismo" value="Ana"></label>
+    <label>Luis<input type="radio" name="lomismo" value="Luis"></label>
     
+    <!-- ----------------------------------------------------------- -->
 
+    <h3>Ej 5:</h3>
+
+    <input type="text" name="campoTexto" id="campoTexto">
+    <input type="button" value="Mostrar Caracteres" id="botonEj5">
+
+    
+    <!-- ----------------------------------------------------------- -->
+    
+    <h3>Ej 6:</h3>
+    
+    <div id="contenedorCuadrados">
+        <div id="verde"></div>
+        <div id="rojo"></div>
+        <div id="azul"></div>
+    </div>
+    <!-- ----------------------------------------------------------- -->
+    
+    <h3>Ej 7:</h3>
+
+    <select name="desplegble" id="desplegble">
+        <option value="españa">España</option>
+        <option value="italia">Italia</option>
+        <option value="Portugal">Portugal</option>
+    </select>
+        
+
+    
     <script src="ejercicio.js"></script>
 </body>
 </html>

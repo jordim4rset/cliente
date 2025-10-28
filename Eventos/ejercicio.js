@@ -1,9 +1,5 @@
 /* EJERCICIO 1 */
 
-/* Haz un programa que cuando se pulse un botón “Nuevo número”, añada un elemento
-con un número aleatorio a una lista desordenada (elemento UL). */
-
-
 //SELECCIONAMOS EL BOTÓN
 let boton = document.getElementById('botonEj1');
 
@@ -20,23 +16,12 @@ boton.addEventListener('click', () => {
 
 /* EJERCICIO 2 */
 
-/* Haz un programa que mediante eventos y el uso del objeto event, te muestre en todo
-momento la posición actual del ratón en pantalla. Para mostrarlo modificaremos de forma
-dinámica un elemento XHTML (Ejemplo, un <p>) que nos muestre la posición actual del
-ratón. */
-
-
 document.body.addEventListener('mouseover', (evento) => {
     document.getElementById('coordenadas').innerHTML = evento.clientX+' '+evento.clientY;
 });
 
 
 /* EJERCICIO 3 */
-
-/* Haz un programa que tenga 3 elementos <p> y al hacer clic sobre ellos desaparezcan
-(se oculten) y al hacer clic derecho los elimine. También deberá tener un botón
-“Reaparecer” que hará que aparezcan todos los elementos desaparecidos (pero no los
-eliminados). */
 
 //SELECCIONAMOS LAS P QUE ESTEN DENTRO DEL DIV
 let parraf = document.getElementById('ej3').querySelectorAll('p');
@@ -70,12 +55,66 @@ botonEj3.addEventListener('click', () => {
 });
 
 /* EJERCICIO 4 */
+let radios = document.querySelectorAll("input[name='lomismo']");
 
-/* Crea una página con botones de selección única, cada uno con un nombre distinto
-(por ejemplo: “Juan”, “Ana”, “Luis”). Al hacer clic en una opción, debe aparecer una alerta
-saludando a esa persona. Usa una única función que reciba el nombre como parámetro
-para mostrar el saludo. */
+radios.forEach(radio => {
+    radio.addEventListener('click', () => {
+        llamar(radio.value);
+    });
+});
 
 function llamar(nombre){
-
+    alert('Hola '+nombre);
 }
+
+/* EJERCICIO 5 */
+
+let botonEj5 = document.getElementById('botonEj5');
+let campoTexto = document.getElementById('campoTexto');
+
+botonEj5.addEventListener('click', () => {
+    let texto = campoTexto.value;
+    let caracteres = texto.length;
+    alert(caracteres);
+});
+
+/* EJERCICIO 6 */
+/* Crea varios cuadros de colores (por ejemplo: rojo, azul, verde). Al pasar el cursor por
+encima de cada uno, cambia el fondo del documento al color del cuadro. */
+
+let cuadradoVerde = document.getElementById('verde');
+let cuadradoAzul = document.getElementById('azul');
+let cuadradoRojo = document.getElementById('rojo');
+
+
+cuadradoVerde.addEventListener('mouseover', () => {
+    document.body.style.backgroundColor = "green";
+});
+cuadradoAzul.addEventListener('mouseover', () => {
+    document.body.style.backgroundColor = "blue";
+});
+cuadradoRojo.addEventListener('mouseover', () => {
+    document.body.style.backgroundColor = "red";
+});
+
+/* EJERCICIO 7 */
+/* Crea un desplegable con opciones de países. Cuando el usuario seleccione uno,
+muestra un mensaje que diga: “Has seleccionado: [país]”. */
+let seleccion
+let opciones = document.querySelectorAll('option');
+
+console.log(opciones);
+
+opciones.forEach(pais => {
+    pais.addEventListener('change', () =>{
+        alert('Has seleccionado '+pais.value);
+    })
+});
+
+
+
+
+
+
+
+
