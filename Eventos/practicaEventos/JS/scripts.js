@@ -30,17 +30,30 @@ opcionesMenu.forEach(opcion => {
 /* EJERCICIO 2 */
 
 let botonSubmit = document.getElementById('botonSubmit');
+let campoCorrreo = document.getElementById('correo');
+let campoPassw = document.getElementById('contrasenya');
+let alertPassw = document.getElementById('mensajeAlertaContrasenya');
+let alertCorreo = document.getElementById('mensajeAlertaCorreo');
+
+
+campoCorrreo.addEventListener('blur', () => {
+    if(!correo.value.includes("@")){
+        alertCorreo.innerHTML = 'Debe incluir `@`';
+    }
+});
+
+campoPassw.addEventListener('blur', () => {
+    if(contrasenya.value.length < 8 || contrasenya.value.length > 10){
+        alertPassw.innerHTML = 'Debe contener entre 8 y 10 caracteres';
+    }
+});
 
 botonSubmit.addEventListener('click', () => {
-    let contrasenya = document.getElementById('contrasenya');
-    let correo = document.getElementById('correo');
-    console.log(correo.value);
     if(contrasenya.value.length < 8 || contrasenya.value.length > 10){
         contrasenya.style.backgroundColor = "grey";
     }else{
         contrasenya.style.backgroundColor = "white";
     }
-    console.log('si pasa por aqui');
     if(!correo.value.includes("@")){
         correo.style.backgroundColor = "grey";
     }else{
