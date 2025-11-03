@@ -1,0 +1,27 @@
+
+#secCrearRec{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 100%;
+
+    & div{
+        margin: 20px;
+        border: solid 1px black;
+        padding: 10px;
+    }
+    
+    & button{
+        margin-left: 35%;
+    }
+
+    & input{
+        margin-bottom: 10px;
+    }
+}
+
+#rectangulos{
+    & div{
+        border: solid 1px black;
+    }
+}
