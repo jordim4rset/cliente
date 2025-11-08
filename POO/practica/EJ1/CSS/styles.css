@@ -1,0 +1,29 @@
+#container-CrearRectangulo{
+    display: flex;
+
+    & div{
+        width: 500px;
+        height: 200px;
+        border: 1px solid black;
+        padding-left: 20px;
+    }
+
+}
+
+.crearRectangulos{
+    & input{
+        margin-bottom: 20px;
+    }
+
+    & button{
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+}
+
+#rectangulos{
+    border: 1px solid black;
+    margin-top: 50px;
+    width: 1000px;
+    height: 400px;
+}

@@ -1,5 +1,5 @@
 class Rectangulo{
-    
+
     //CONSTRUCTOR
     constructor(ancho, alto){
         this.ancho = this.validarDatos(ancho);
@@ -98,5 +98,29 @@ let pComparar = document.getElementById('pComparar');
 btnComparar.addEventListener('click', () => {
     pComparar.innerHTML = rectangulo1.comparar(rectangulo2);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
