@@ -20,7 +20,7 @@ fetch(`https://dummyjson.com/products/${id}`)
             price: data.price
         }
 
-        fetch('https://httpbin.org/post',{
+        return fetch('https://httpbin.org/post',{
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json'
@@ -36,7 +36,9 @@ fetch(`https://dummyjson.com/products/${id}`)
             }
         })
         .then((dataPost) => {
-            console.log('Respuesta servidor'+data);
+            document.getElementById('titlePost').innerHTML = dataPost.json.title;
+            console.log('Titulo recibido: ',dataPost.json.title);
+            console.log('Respuesta servidor',dataPost);
         })
     })
     .catch((error) => {
